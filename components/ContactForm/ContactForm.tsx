@@ -8,18 +8,19 @@ export default function ContactForm() {
     message: '',
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
-  };
+};
 
-  const handleSubmit = (e) => {
+const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log(formData);
-    // Your form handling code here
-  };
+    
+};
+
 
   return (
     <div className="flex justify-center items-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
